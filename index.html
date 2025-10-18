@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>$PCOCK — The Cock That Will Peg the Market Into Submission</title>
-  <meta name="description" content="$PCOCK — savage meme energy. Join the cult early, buy on pump.fun, follow on X."/>
+  <title>$PCOCK — The Meme Cult</title>
+  <meta name="description" content="$PCOCK — savage meme energy. Buy now on pump.fun and join the cult."/>
   <meta property="og:title" content="$PCOCK — Meme Cult" />
   <meta property="og:description" content="THE COCK THAT WILL PEG THE MARKET INTO SUBMISSION" />
   <meta property="og:image" content="assets/images/banner.png" />
@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- NAV -->
   <nav class="nav">
     <div class="brand">
       <img src="assets/images/profile.png" alt="$PCOCK" />
@@ -22,79 +21,76 @@
     </div>
     <div class="actions">
       <a class="btn ghost" href="https://x.com/pcockcoin" target="_blank" rel="noopener">Follow X</a>
-      <a class="btn disabled" href="#" title="Telegram coming soon">Join Telegram (soon)</a>
+      <a class="btn" href="#" title="Telegram coming soon">Join the Cult (soon)</a>
       <a id="buy" class="btn danger" href="https://pump.fun/coin/5dkh7zGDiJ539w4u3QGnxy4e3tFSPRAwPGdr3zR4pump" target="_blank" rel="noopener">BUY OR BE PEGGED</a>
     </div>
   </nav>
 
-  <!-- COUNTDOWN RIBBON -->
-  <div class="ribbon" id="countdown" data-target="">
-    <div class="inner">
-      <span class="badge">GRADUATION COUNTDOWN</span>
-      <span class="t">00:00:00</span>
-      <span class="badge">Buy early or miss it.</span>
-    </div>
+  <div class="ribbon" id="countdown">
+    <div class="inner"><span class="badge">GRADUATION</span><span class="t">00:00:00</span><span class="badge">Buy early or be subjugated</span></div>
   </div>
 
-  <!-- HERO -->
   <section class="hero" aria-label="Meme Cult Hero">
     <div class="energy"></div>
-    <div class="floating"></div>
-
     <div class="hero-inner container">
-      <img src="assets/images/hero.png" alt="Pepe Cock Hero" />
+      <div class="hero-figure">
+        <img src="assets/images/hero.png" alt="Pepe Cock — Cinematic Hero" />
+      </div>
       <h1 class="h1">THE COCK THAT WILL PEG THE MARKET INTO SUBMISSION</h1>
-      <div class="sub">Solana hasn’t seen a meme this hard. Early disciples become future whales.</div>
+      <div class="sub">The meme coin era is over. The meme <i>cult</i> era begins.</div>
       <div class="cta">
-        <a id="buy2" class="btn danger" href="https://pump.fun/coin/5dkh7zGDiJ539w4u3QGnxy4e3tFSPRAwPGdr3zR4pump" target="_blank" rel="noopener">BUY OR BE PEGGED</a>
-        <a class="btn ghost" href="https://x.com/pcockcoin" target="_blank" rel="noopener">Follow the Movement</a>
-        <a class="btn disabled" href="#" title="Telegram coming soon">Join the Cult (soon)</a>
+        <a class="btn danger" href="https://pump.fun/coin/5dkh7zGDiJ539w4u3QGnxy4e3tFSPRAwPGdr3zR4pump" target="_blank" rel="noopener">BUY OR BE PEGGED</a>
+        <a class="btn primary" href="https://x.com/pcockcoin" target="_blank" rel="noopener">Follow the Movement</a>
+        <a class="btn" href="#" title="Telegram coming soon">Join the Cult (soon)</a>
       </div>
     </div>
   </section>
 
-  <!-- METRICS PANEL -->
   <section class="section">
-    <div class="container grid2">
-      <div class="panel">
-        <h3>Live Metrics (manual or auto)</h3>
-        <div class="kv">
-          <div><div class="k">Price</div><div id="price" class="v">—</div></div>
-          <div><div class="k">Market Cap</div><div id="mc" class="v">—</div></div>
-          <div><div class="k">Holders</div><div id="holders" class="v">—</div></div>
-        </div>
-        <p class="manifest" style="margin-top:8px">Pre-graduation values may be unavailable. You can paste numbers manually, or set an API URL to auto-fetch (if CORS allows).</p>
+    <div class="container panel">
+      <h3>Live Metrics</h3>
+      <div class="kv">
+        <div><div>Price</div><div id="price" class="v">—</div></div>
+        <div><div>Market Cap</div><div id="mc" class="v">—</div></div>
+        <div><div>Holders</div><div id="holders" class="v">—</div></div>
       </div>
-      <div class="panel">
-        <h3>Update Metrics</h3>
-        <div class="kv" style="gap:8px">
-          <input id="input-price" placeholder="Price (e.g., 0.000123)" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--text)">
-          <input id="input-mc" placeholder="Market Cap (e.g., 1200000)" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--text)">
-          <input id="input-holders" placeholder="Holders (e.g., 420)" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--text)">
-          <button id="save-metrics" class="btn">Save</button>
-        </div>
-        <div style="margin-top:10px">
-          <div class="manifest">Optional auto-fetch URL (JSON):</div>
-          <input id="price-url" placeholder="https://api.example.com/yourcoin.json" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--text)">
-          <button id="fetch-now" class="btn" style="margin-top:8px">Fetch Now</button>
-          <p class="manifest" style="margin-top:8px">Tip: After graduation, you can point this to a price API that supports CORS (or a small Cloudflare Worker that proxies one).</p>
-        </div>
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <input id="input-price" placeholder="Price" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--text)">
+        <input id="input-mc" placeholder="Market Cap" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--text)">
+        <input id="input-holders" placeholder="Holders" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--text)">
+        <button id="save-metrics" class="btn">Save</button>
       </div>
     </div>
   </section>
 
-  <!-- MEME SLIDER -->
   <section class="section">
-    <div class="container">
-      <h3 style="text-align:center;margin:0 0 10px">Memes from the Cult</h3>
-      <div class="slider">
-        <div class="slider-track">
-          <img src="assets/images/profile.png" alt="meme1" />
-          <img src="assets/images/hero.png" alt="meme2" />
-          <img src="assets/images/banner.png" alt="meme3" />
+    <div class="container grid3">
+      <div class="panel">
+        <h3>Tokenomics</h3>
+        <ul>
+          <li>Supply: meme-tier (see pump.fun)</li>
+          <li>Liquidity: pump.fun → Raydium</li>
+          <li>Distribution: open market</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Roadmap</h3>
+        <ul>
+          <li>Phase I — Pre-grad recruitment</li>
+          <li>Phase II — Graduation & raids</li>
+          <li>Phase III — Listings & memes</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Meme Gallery</h3>
+        <div class="slider">
+          <div class="slider-track">
+            <img src="assets/images/banner.png" alt="meme" />
+            <img src="assets/images/profile.png" alt="meme" />
+            <img src="assets/images/hero.png" alt="meme" />
+          </div>
         </div>
       </div>
-      <p class="manifest" style="margin-top:10px">Want to contribute? Drop your memes in Telegram after launch.</p>
     </div>
   </section>
 
